@@ -1,4 +1,4 @@
-yvc_landmarks = {
+vc_landmarks = {
   'Marine Building': set(['Burrard', 'Waterfront']),
   'Scotiabank Field at Nat Bailey Stadium': set(['King Edward']),
   'Vancouver Aquarium': set(['Burrard']),
