@@ -1,7 +1,7 @@
-from graph_search import bfs, dfs
-from vc_metro import vc_metro
-from vc_landmarks import vc_landmarks
-from landmark_choices import landmark_choices
+from Resources.graph_search import bfs, dfs
+from Resources.vc_metro import vc_metro
+from Resources.vc_landmarks import vc_landmarks
+from Resources.landmark_choices import landmark_choices
 
 ####################
 landmark_string = ""
@@ -12,8 +12,8 @@ for letter, landmark in landmark_choices.items():
 stations_under_construction = []
 ####################
 def greet():
-  print("Hi there and welcome to SkyRoute!")
-  print("We'll help you find the shortest route between the following Vancouver landmarks:\n" + landmark_string)
+  print("\n\nHi there and welcome to SkyRoute!")
+  print("\n\nWe'll help you find the shortest route between the following Vancouver landmarks:\n\n" + landmark_string)
 
 
 
@@ -89,11 +89,11 @@ def new_route(start_point=None, end_point=None):
   
   if shortest_route:
     shortest_route_string = "\n".join(shortest_route)
-    print("The shortest metro route from {0} to {1} is:\n{2}".format(start_point, end_point,  shortest_route_string))
+    print("\n\nThe shortest metro route from {0} to {1} is:\n{2}".format(start_point, end_point,  shortest_route_string))
   else:
-    print("Unfortunately, there is currently no path between {0} and {1} due to maintenance.".format(start_point, end_point))
+    print("\n\nUnfortunately, there is currently no path between {0} and {1} due to maintenance.".format(start_point, end_point))
 
-  again = input("Would you like to see another route? Enter y/n: ")
+  again = input("\n\nWould you like to see another route? Enter y/n: ")
   if again == "y":
     show_landmarks()
     new_route(start_point, end_point)
@@ -101,7 +101,7 @@ def new_route(start_point=None, end_point=None):
 
 # Option for refreshing the landmarks to choose from
 def show_landmarks():
-  see_landmarks = input("Would you like to see the list of landmarks again? Enter y/n: ")
+  see_landmarks = input("\n\nWould you like to see the list of landmarks again? Enter y/n: ")
   if see_landmarks == "y":
     print(landmark_string)
 
@@ -126,7 +126,7 @@ def get_route(start_point, end_point):
     return shortest_route
 
 def goodbye():
-  print("Thanks for using SkyRoute!")
+  print("\n\nThanks for using SkyRoute!")
 
 
 skyroute()
